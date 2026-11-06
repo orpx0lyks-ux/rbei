@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "rbei",
+	"version": "${version}",
+	"name": "RBEI",
+	"description": "Vanilla-friendly JEI-style recipe book for Fabric. Replaces the vanilla recipe book with an item & recipe browser.",
+	"authors": ["max"],
+	"contact": {
+		"sources": "https://github.com/orpx0lyks-ux/rbei",
+		"issues": "https://github.com/orpx0lyks-ux/rbei/issues",
+		"homepage": "https://modrinth.com/mod/rbei",
+		"wiki": "https://github.com/orpx0lyks-ux/rbei/wiki"
+	},
+	"license": "MIT",
+	"icon": "assets/rbei/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"fr.max.rbei.RbeiClient"
+		],
+		"rbei:recipe_adapter": []
+	},
+	"custom": {
+		"rbei:recipe_api": "fr.max.rbei.recipe.api.RbeiRecipeApi"
+	},
+	"mixins": [
+		{
+			"config": "rbei.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

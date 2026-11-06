@@ -1,0 +1,103 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+	id 'com.modrinth.minotaur' version '2.+'
+	id 'net.darkhax.curseforgegradle' version '1.1.26'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	// Fabric / Mojang / Maven Central sont ajoutés automatiquement par Loom.
+}
+
+dependencies {
+	// Minecraft 26.x n'est plus obfusqué : pas de mappings, pas de "mod*" configurations.
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	// Sources jar optionnel pour le dev — pas nécessaire pour jouer / publier
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.withType(Test).configureEach {
+	useJUnitPlatform()
+}
+
+// ---------------------------------------------------------------------------
+// Publication Modrinth + CurseForge
+// 1) Créer le projet à la main sur chaque site
+// 2) Remplir modrinth_project_id / curseforge_project_id dans gradle.properties
+// 3) Exporter MODRINTH_TOKEN et CURSEFORGE_TOKEN
+// 4) .\gradlew.bat publishMods
+// ---------------------------------------------------------------------------
+
+def changelogText = providers.fileContents(layout.projectDirectory.file('CHANGELOG.md'))
+		.asText
+		.orElse('See Modrinth / CurseForge page for details.')
+
+// MC 26.x : pas de remap — artefact jouable = task `jar`
+def modJar = tasks.named('jar')
+
+modrinth {
+	token = System.getenv('MODRINTH_TOKEN')
+	projectId = findProperty('modrinth_project_id') ?: 'REPLACE_ME'
+	versionNumber = project.version
+	versionName = "RBEI ${project.version}"
+	versionType = findProperty('release_type') ?: 'release'
+	changelog = changelogText
+	uploadFile = modJar
+	gameVersions = [project.minecraft_version]
+	loaders = ['fabric']
+	dependencies {
+		required.project 'fabric-api'
+	}
+	syncBodyFrom = rootProject.file('DESCRIPTION.md').getText('UTF-8')
+}
+
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+	group = 'publishing'
+	description = 'Upload jar to CurseForge'
+	apiToken = System.getenv('CURSEFORGE_TOKEN') ?: ''
+
+	def projectId = findProperty('curseforge_project_id') ?: '0'
+	def mainFile = upload(projectId as String, modJar)
+	mainFile.displayName = "RBEI ${project.version}"
+	mainFile.releaseType = findProperty('release_type') ?: 'release'
+	mainFile.changelog = changelogText.get()
+	mainFile.changelogType = 'markdown'
+	mainFile.addModLoader('Fabric')
+	mainFile.addGameVersion(project.minecraft_version)
+	mainFile.addJavaVersion('Java 25')
+	mainFile.addRequirement('fabric-api')
+}
+
+tasks.register('publishMods') {
+	group = 'publishing'
+	description = 'Publish to Modrinth and CurseForge'
+	dependsOn tasks.named('modrinth'), tasks.named('publishCurseForge')
+}

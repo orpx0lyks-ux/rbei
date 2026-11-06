@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "fr.max.rbei.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ScreenInvoker",
+		"ContainerScreenAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
