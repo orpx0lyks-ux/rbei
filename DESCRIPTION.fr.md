@@ -29,4 +29,4 @@ Remplace le recipe book de Minecraft.
 
 - [GitHub](https://github.com/orpx0lyks-ux/rbei) · [Issues](https://github.com/orpx0lyks-ux/rbei/issues) · [Wiki](https://github.com/orpx0lyks-ux/rbei/wiki)
 
-MIT · max
+MIT · x0lykS

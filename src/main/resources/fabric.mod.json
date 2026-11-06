@@ -4,7 +4,7 @@
 	"version": "${version}",
 	"name": "RBEI",
 	"description": "Vanilla-friendly JEI-style recipe book for Fabric. Replaces the vanilla recipe book with an item & recipe browser.",
-	"authors": ["max"],
+	"authors": ["x0lykS"],
 	"contact": {
 		"sources": "https://github.com/orpx0lyks-ux/rbei",
 		"issues": "https://github.com/orpx0lyks-ux/rbei/issues",

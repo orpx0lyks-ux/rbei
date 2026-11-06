@@ -29,4 +29,4 @@ Replaces Minecraft’s recipe book with a JEI-style item & recipe browser.
 
 - [GitHub](https://github.com/orpx0lyks-ux/rbei) · [Issues](https://github.com/orpx0lyks-ux/rbei/issues) · [Wiki](https://github.com/orpx0lyks-ux/rbei/wiki)
 
-MIT · max
+MIT · x0lykS
