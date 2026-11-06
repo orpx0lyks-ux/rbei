@@ -32,3 +32,6 @@ runs/
 **/patch-resp.txt
 **/version-data.json
 **/side.json
+
+.wiki-tmp/
+
