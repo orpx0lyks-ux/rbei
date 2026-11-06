@@ -164,6 +164,13 @@ Locally in `config/rbei-client.json`.
 - **Author:** max  
 - **Mod ID:** `rbei`
 
+## Links
+
+- [Modrinth](https://modrinth.com/mod/rbei)  
+- [Source (GitHub)](https://github.com/orpx0lyks-ux/rbei)  
+- [Issues / feedback](https://github.com/orpx0lyks-ux/rbei/issues)  
+- [Wiki](https://github.com/orpx0lyks-ux/rbei/wiki)  
+
 ---
 
-*Thanks for downloading. Feedback and bug reports are welcome on the project page.*
+*Thanks for downloading. Feedback and bug reports welcome on [GitHub Issues](https://github.com/orpx0lyks-ux/rbei/issues).*
