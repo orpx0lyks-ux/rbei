@@ -1,7 +1,7 @@
-﻿# RBEI — RecipeBookEnoughItems
+# RBEI - RecipeBookEnoughItems
 
 **A vanilla-friendly recipe book for Fabric.**  
-Replaces Minecraft’s recipe book with browse items, recipes, craft, loot, brewing, ores and more — without leaving your world, and without installing JEI/REI/EMI.
+Replaces Minecraft’s recipe book with browse items, recipes, craft, loot, brewing, ores and more.
 
 Built for **Minecraft 26.2** · **Fabric** · **client-side only**.
 
@@ -15,9 +15,7 @@ Minecraft's recipe book is limited. **RBEI** keeps a vanilla feel while giving y
 - Brewing steps  
 - Loot / mob drops (with chances when available)  
 - Ore generation ranges (Y min / max / best layers)  
-- Many mod recipes detected automatically  
-
-No JEI, REI, or EMI required — RBEI works on its own.
+- Many mod recipes detected automatically
 
 ---
 
@@ -25,20 +23,20 @@ No JEI, REI, or EMI required — RBEI works on its own.
 
 ### Item browser
 - Full item list with live count  
-- Fast search: plain text, `@mod` (namespace), `#tag`  
+- Fast search: plain text, "@mod", "#tag"  
 - Category tabs (favorites, tools, blocks, nature, …)  
 - **Recent** bar for items you just looked at  
 - Yellow markers on favorites in the grid  
 
 ### Recipes & uses
-- **Left click / R** → how to obtain / craft an item  
-- **Right click / U** → where the item is used  
+- **Left click / R** -> how to obtain / craft an item  
+- **Right click / U** -> where the item is used  
 - Multi-page results with clean craft grids  
 - Station icon (crafting table, furnace, brewing stand, …)  
-- **+** transfer button → push ingredients into an open crafting table or furnace (Shift = fill max)  
+- **+** transfer button → push ingredients into an open crafting table or furnace...
 
 ### Favorites
-- **☆ / ★** on the recipe header (not confused with transfer **+**)  
+- **☆ / ★** on the recipe header
 - Middle-click an item to toggle favorite  
 - Dedicated favorites tab (Nether Star icon)  
 
@@ -48,7 +46,7 @@ No JEI, REI, or EMI required — RBEI works on its own.
 - Compare two items (**=**)  
 - Copy registry ID with **C**  
 - Replaces the vanilla recipe-book button on inventory / crafting / furnaces  
-- Open anytime with the keybind (default **O** outside the search box)  
+- Open anytime with the keybind (default **O**)  
 
 ---
 
@@ -82,7 +80,7 @@ No JEI, REI, or EMI required — RBEI works on its own.
 
 ![Mob drops](https://cdn.modrinth.com/data/AmOxYHkh/images/072980f4e4b90033c80b241b3acde35e71585fcb.png)
 
-*Loot sources — e.g. carrots dropped by zombies*
+*Loot sources = carrots dropped by zombies*
 
 ### Ore generation
 
@@ -124,7 +122,7 @@ No JEI, REI, or EMI required — RBEI works on its own.
 
 1. Install Fabric Loader for Minecraft **26.2**  
 2. Install **Fabric API**  
-3. Drop `rbei-<version>.jar` into your `mods` folder  
+3. Drop `rbei-<version>.jar` into your "mods" folder  
 4. Launch the game and press **O** (or your bound key)
 
 Config file (optional): `config/rbei-client.json`  
@@ -134,7 +132,7 @@ Config file (optional): `config/rbei-client.json`
 
 ## Compatibility notes
 
-- **Client-only** — no server install needed  
+- **Client-only** - no server install needed  
 - Works alongside most Fabric mods  
 - Recipe coverage: vanilla + many mods via native recipe types and auto-detection  
 - Some highly custom machine UIs may show incomplete layouts; brewing, loot, and ores have dedicated sources  
@@ -154,7 +152,7 @@ Players install it on the **client**. The server does not need RBEI.
 Transfer **+** works when you opened RBEI from a crafting table or furnace screen with a compatible grid.
 
 **Where are favorites stored?**  
-Locally in `config/rbei-client.json`.
+Locally in "config/rbei-client.json".
 
 ---
 
@@ -162,7 +160,7 @@ Locally in `config/rbei-client.json`.
 
 - **License:** MIT  
 - **Author:** x0lykS  
-- **Mod ID:** `rbei`
+- **Mod ID:** rbei
 
 ## Links
 
