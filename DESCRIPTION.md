@@ -173,4 +173,4 @@ Locally in `config/rbei-client.json`.
 
 ---
 
-*Thanks for downloading. Feedback and bug reports welcome on [GitHub Issues](https://github.com/orpx0lyks-ux/rbei/issues).*
+*Thanks for downloading. Feedback and bug reports welcome on [GitHub Issues](https://github.com/orpx0lyks-ux/rbei/issues).* 
