@@ -169,7 +169,7 @@ Locally in `config/rbei-client.json`.
 - [Modrinth](https://modrinth.com/mod/rbei)  
 - [Source (GitHub)](https://github.com/orpx0lyks-ux/rbei)  
 - [Issues / feedback](https://github.com/orpx0lyks-ux/rbei/issues)  
-- [Wiki](https://github.com/orpx0lyks-ux/rbei/wiki)  
+- [Wiki / docs](https://github.com/orpx0lyks-ux/rbei/tree/main/docs)  
 
 ---
 
