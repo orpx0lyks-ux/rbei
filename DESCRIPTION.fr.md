@@ -1,42 +1,32 @@
 # RBEI — RecipeBookEnoughItems
 
-**Un livre de recettes façon JEI, avec un feeling vanilla, pour Fabric.**  
-RBEI remplace le recipe book de Minecraft par un navigateur d’objets & recettes : crafts, usages, potions, butins et minerais — sans quitter ta partie, et sans JEI/REI/EMI.
+Livre de recettes façon JEI, côté vanilla, pour Fabric.  
+Remplace le recipe book de Minecraft.
 
-**Minecraft 26.2** · **Fabric** · **client uniquement**.
+**Minecraft 26.2** · Fabric · client uniquement
 
----
+## Fonctions
 
-## Pourquoi RBEI ?
+- Navigateur d’objets (recherche, catégories, favoris, récents)
+- Recettes & usages (craft, four, potions, butins, minerais)
+- Transfert des ingrédients vers établi / four avec **+**
 
-Le livre de recettes vanilla est limité. **RBEI** garde un côté vanilla tout en offrant un navigateur style JEI qui indexe :
-
-- Crafts & fours  
-- Étapes de potions  
-- Butins / drops de mobs (avec % si dispo)  
-- Plages Y des minerais  
-- Beaucoup de recettes de mods (auto-détection)  
-
----
-
-## Fonctionnalités
-
-- Navigateur + recherche `@mod` / `#tag`, catégories, barre **Recent**  
-- Recettes (**R**) / usages (**U**)  
-- Favoris ☆ / ★ + onglet Nether Star  
-- Transfert **+** vers établi / four  
-- Overlay craftable, options (**O**), thème (**T**), copie d’ID (**C**), comparaison (**=**)  
-- Remplace le bouton du livre de recettes vanilla (inventaire / établi / fours)
-
----
-
-## Dépendances
+## Contrôles
 
 | | |
 |--|--|
-| [Fabric API](https://modrinth.com/mod/fabric-api) | Obligatoire |
-| Fabric Loader | ≥ 0.19.5 |
-| Java | **25+** |
-| Minecraft | **26.2** |
+| **O** | Ouvrir RBEI / options |
+| Gauche / **R** | Recettes |
+| Droit / **U** | Usages |
+| Molette | Favori |
+| **+** | Transfert |
 
-Licence **MIT** · Auteur **max**
+## Requis
+
+[Fabric API](https://modrinth.com/mod/fabric-api) · Java 25+
+
+## Liens
+
+- [GitHub](https://github.com/orpx0lyks-ux/rbei) · [Issues](https://github.com/orpx0lyks-ux/rbei/issues) · [Wiki](https://github.com/orpx0lyks-ux/rbei/wiki)
+
+MIT · max
